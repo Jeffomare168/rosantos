@@ -1,0 +1,14 @@
+/* loader */
+.cmn__empty__cntr {
+    width: 100%; 
+    height: calc(100vh - 50vh); 
+    border: 1px solid var(--main-bg); 
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.4rem 0; 
+    color: var(--txt-color);
+  }

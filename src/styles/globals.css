@@ -1,0 +1,55 @@
+html,
+body {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Golos Text', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+:root {
+  --black-color: #000; 
+  --white-color: #fff; 
+  --main-color: #356dbe;
+  --secondary-color: #f6f6f6; 
+   
+  --grey-color: #dcdcdc; 
+  --active-color: var(--main-color);
+  --danger-color: tomato; 
+
+  --border-radius: 1.2rem; 
+  --transition: all .3s ease; 
+  --box-shadow-light: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --box-shadow: var(var(--box-shadow-light)); 
+}
+
+ 
+a {
+  font-size: 1.3rem; 
+  color: var(--black-color);
+  text-decoration: none;
+  transition: var(--transition); 
+}
+a:hover {
+  color: var(--active-color);
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.4rem; 
+}
