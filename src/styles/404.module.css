@@ -17,8 +17,10 @@
     height: 70%; 
     object-fit: contain;
  }
+ .pge__err h3 {
+   margin: 2rem 0 .7rem; 
+ }
  .pge__err  p {
     margin: 1rem 0 .4rem; 
-    font-size: 1.5rem;
     letter-spacing: 1.5px;
  }

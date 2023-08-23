@@ -25,7 +25,7 @@ export const NotFound = () => {
         <div className={styles['pge__err']}>
           <Head title={'404 - Page not found!'}/>
           <Image src={IMAGES.Page404.src} alt="not found" internal={true} />
-          <h2>The page you seek does not exist!</h2>
+          <h3>The page you seek does not exist!</h3>
 
           <p>
             Perhaps you might want to recollect your steps at

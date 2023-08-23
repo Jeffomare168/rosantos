@@ -4,5 +4,39 @@
     height: 100vh; 
     margin: 0 auto; 
     padding: .8rem; 
+}
 
+/* navigation */
+/* logo */
+.logo {
+    margin-right: 3rem; 
+}
+.logo img {
+    width: 90px; 
+    height: 90px; 
+}
+
+/* menu items */
+.menu_items a {
+    display: block; 
+    margin-right: 1.3rem; 
+    padding-bottom: .1rem; 
+    border-bottom: 2px solid transparent;
+    font-weight: 400;
+}
+.menu_items a.active {
+    border-bottom-color: var(--active-color);
+    color: var(--active-color);
+}
+.nav a.link_button {
+    background-color: var(--active-color);
+    color: var(--white-color); 
+    padding: .3rem; 
+    border-radius: var(--border-radius);
+    border: 1px solid transparent; 
+    transition: var(--transition);
+}
+.nav a.link_button:hover {
+    background-color: transparent;
+    border-color: var(--white-color);
 }

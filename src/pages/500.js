@@ -23,11 +23,7 @@ export const ServerError = () => {
         <div className={styles['pge__err']}>
           <Head title={'500 - Server Error!'}/>
           <Image src={IMAGES.ServerError.src} alt="not found" internal={true}/>
-          <h2>Server ERROR!</h2>
-
-          <p>
-            Hapa hatukatai, kuna developer amekanyang'a waya!
-          </p>
+          <h3>Server ERROR!</h3>
         </div>
       }
       {
