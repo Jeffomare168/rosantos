@@ -10,7 +10,7 @@ function Layout({children}) {
                 {/* nav */}
                 {/* scroll to top */}
                
-                {/* side menu */}
+                {/* side menu on small screens*/}
     
             <main>
                 {children}

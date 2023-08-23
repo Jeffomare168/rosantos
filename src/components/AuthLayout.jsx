@@ -9,7 +9,7 @@ function Layout({children}) {
             <main>
                 {children}
             </main>
-            <footer>Sokoetu Admin: &#169; {new Date().getFullYear()}</footer>
+            <footer>Auth Footer: &#169; {new Date().getFullYear()}</footer>
         </div>
     );
 }
