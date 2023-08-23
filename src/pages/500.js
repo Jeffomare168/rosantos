@@ -5,6 +5,7 @@ import {useInterval} from '@/hooks/useInterval';
 import {Loader, Head} from '@/utils';
 
 import styles from '@/styles/404.module.css';
+import { IMAGES } from '@/assets';
  
 export default function Custo500 () {
   return <ServerError />;
@@ -21,7 +22,7 @@ export const ServerError = () => {
 
         <div className={styles['pge__err']}>
           <Head title={'500 - Server Error!'}/>
-          <Image src="/apps/sokoetu/pb/serverError.svg" alt="not found" internal={true}/>
+          <Image src={IMAGES.ServerError.src} alt="not found" internal={true}/>
           <h2>Server ERROR!</h2>
 
           <p>

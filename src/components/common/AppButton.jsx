@@ -1,8 +1,9 @@
 import React from 'react';
+import { useRouter } from 'next/router';
+
 import { Oval } from  'react-loader-spinner'
 
-import styles from "../../styles/components/AppInput.module.css"; 
-import { useRouter } from 'next/router';
+import styles from "@/styles/components/AppButton.module.css"; 
 
 function AppButton({onClick, text, icon, type}) {
     const router = useRouter(); 

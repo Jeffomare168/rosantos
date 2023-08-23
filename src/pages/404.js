@@ -7,6 +7,7 @@ import {Loader, Head} from '@/utils';
 
 
 import styles from '@/styles/404.module.css';
+import { IMAGES } from '@/assets';
 
 export default function Custom404 () {
   return <NotFound />;
@@ -23,7 +24,7 @@ export const NotFound = () => {
 
         <div className={styles['pge__err']}>
           <Head title={'404 - Page not found!'}/>
-          <Image src={`/apps/sokoetu/pb/404.svg`} alt="not found" internal={true} />
+          <Image src={IMAGES.Page404.src} alt="not found" internal={true} />
           <h2>The page you seek does not exist!</h2>
 
           <p>

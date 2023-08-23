@@ -23,29 +23,3 @@
 .error {
     color: var(--danger-color); 
 }
-
-
-
-/* button */
-.button {
-    background-color: var(--main-color);
-    color: var(--white-color); 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    width: 100%; 
-    border: 1px solid var(--black-color); 
-    border-radius: .7rem;
-    padding: .8rem 0; 
-    margin: 1rem 0; 
-    cursor: pointer;
-    transition: var(--transition);
-}
-.button p {
-    font-size: 1.3rem; 
-}
-.button:hover {
-    background-color: transparent;
-    border-color: var(--active-color);
-    color: var(--main-color);
-}

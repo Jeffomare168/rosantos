@@ -29,7 +29,7 @@ html {
   --box-shadow-light: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   --box-shadow: var(--box-shadow-light); 
 
-  --page-width: 130rem; 
+  --page-width: 90rem; 
 }
 
 

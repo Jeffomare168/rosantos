@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from "../../styles/components/AppInput.module.css"; 
+import styles from "@/styles/components/AppInput.module.css"; 
 
 function AppInput({type, value, setValue, err, icon, label, validate}) {
     const [error, setError] = React.useState(err || "");

@@ -7,7 +7,7 @@ function Loader({loading, reset}) {
 
    return (
       <div
-         className={reset ? "": styles['cmn__empty__cntr']}
+         className={reset ? "": styles['loader']}
       >
          {loading && (
             <div
