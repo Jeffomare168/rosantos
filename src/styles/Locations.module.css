@@ -6,7 +6,6 @@
 }
 .counter_separator {
     display: block; 
-    background: var(--grey-color);
     height: 19px; 
     width: 2px; 
     margin: 0 .9rem; 
