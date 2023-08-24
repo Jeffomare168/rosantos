@@ -13,7 +13,7 @@ const getData = async (url, dispatch, title, alert) => {
     const res = await getDoc(url, alert, dispatch);
     if (res) return res;
     if (!res) {
-        if (process.env.NODE_ENV === "development" && data[title]) return data[title]; 
+        if (data[title]) return data[title]; 
         return []
     }; 
 };
