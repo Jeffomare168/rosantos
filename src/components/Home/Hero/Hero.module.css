@@ -1,0 +1,107 @@
+.hero_container {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    height: var(--hero-height); 
+    width: 100vw; 
+    z-index: -1; 
+    mix-blend-mode: overlay;
+}
+.hero_container img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+/* hero text section */
+.hero_text {
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: var(--level-two);
+    background-color: rgba(0,0,0,.7);
+    padding-top: 4rem; 
+
+  }
+  .hero_image {
+    align-self: center;
+  }
+  
+  
+  .h2_the {
+    font-family: 'Lacoste';
+    color: white; 
+    font-size: 3rem; 
+    margin-left: -1.5rem;
+    margin-bottom: -2.6rem;
+  }
+  .h2_name {
+    color: white; 
+    font-size: 3rem; 
+    font-weight: 1000;
+    font-size: 6.6rem;
+  }
+  .h2_rest {
+    font-family: "Mansions";
+    color: white; 
+    font-size: 5rem; 
+    margin-top: -20px;
+  }
+  .h2_rest span {
+    display: block;
+    border-radius: 10px; 
+    width: 80px; 
+    height: 7px; 
+    background: tomato; 
+    
+  }
+  
+  .hero_btn {
+    margin-bottom: 3rem; 
+  }
+  
+  /* .hero_btn {
+    border: 1px solid var(--white-color);
+    border-radius: 15px; 
+    height: 40px; 
+    width: 30px; 
+    z-index: var(--level-three);
+    padding: .8rem 0; 
+  
+  }
+  .hero_btn span {
+    display: block;
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%;
+    background-color: var(--white-color);
+  } */
+  @media (max-width: 800px) {
+    .hero_image {
+      margin-bottom: .5rem;
+    }
+    .h2_the {
+      font-size: 1.5rem; 
+      margin-bottom: -1rem;
+    }
+    .h2_name {
+      font-size: 3rem; 
+    }
+    .h2_rest {
+      font-size: 2.5rem; 
+      margin-top: -15px
+    }
+    .h2_rest span {
+      width: 20px;
+    }
+    .hero_btn {
+      height: 30px; 
+      width: 20px; 
+      align-items: center;
+      /* justify-content: center;  */
+    }
+    .hero_text {
+      align-items: center;
+    }
+  }

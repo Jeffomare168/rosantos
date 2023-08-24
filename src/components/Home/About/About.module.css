@@ -1,0 +1,36 @@
+.about_container {
+    max-width: var(--container-width); 
+    text-align: center;
+    margin-top: calc(var(--hero-height) - 7vh); 
+}
+.a_tag {
+    border-bottom: 1px solid var(--active-color); 
+    padding-bottom: .8rem; 
+  }
+  .about_container h3 {
+    margin: 2rem 0; 
+    font-family: "Mansions";
+    font-size: 4rem; 
+  }
+  .about_container p {
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  .about_image {
+    margin-left: .5rem; 
+    margin-top: 2rem; 
+    min-width: 50%; 
+  }
+  .about_image img {
+    height: 100%; 
+    width: 100%; 
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 800px) {
+    .about_text {
+      align-items: center !important; 
+      margin-bottom: 1.5rem; 
+    }
+  }

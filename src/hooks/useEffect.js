@@ -1,9 +1,7 @@
-export function customUseEffect(callback) {
-    let mounted = true;
-    if (mounted) {
-      callback();
-    }  
-    return () => {
-     if (mounted) mounted = false;
-    };
+// custom useEffect that takes in a callback; 
+export function customUseEffect(callback, router, setLoading) {
+    if (router.isReady) {
+        callback(); 
+        if (setLoading) setTimeout(() => setLoading(false), 2500)
+    }
  }

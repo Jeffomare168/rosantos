@@ -1,3 +1,7 @@
+// loader component
+// occupies the entire width and height unless reset prop is passed as a boolean 
+// which then allows it to take in the height and width of parent component 
+
 import React from 'react';
 import { RotatingLines } from 'react-loader-spinner';
 

@@ -1,9 +1,30 @@
+@font-face {
+  font-family: "Fabiola";
+  src: url('/fonts/fabiolla-personal-use.ttf')
+}
+@font-face {
+  font-family: "Mansions";
+  src: url('/fonts/Mansions Brush Script.ttf')
+}
+@font-face {
+  font-family: "Lacoste";
+  src: url('/fonts/Lacosta_PERSONAL_USE_ONLY.ttf')
+}
+
 html,
 body {
   font-family: 'Poppins', sans-serif;
 }
 html {
   font-size: 16px;
+  overflow: hidden;
+}
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 0; 
 }
 * {
   box-sizing: border-box;
@@ -15,11 +36,11 @@ html {
 :root {
   --black-color: #000; 
   --white-color: #fff; 
+  --grey-color: #dcdcdc; 
 
   --main-color: #356dbe;
   --secondary-color: #f6f6f6; 
    
-  --grey-color: #dcdcdc; 
   --active-color: var(--main-color);
   --danger-color: tomato; 
   --warning-color: #ffcc00; 
@@ -30,6 +51,13 @@ html {
   --box-shadow: var(--box-shadow-light); 
 
   --page-width: 90rem; 
+  --container-width: 1000px; 
+
+  --level-one: 500; 
+  --level-two: 1000; 
+  --level-three: 1500; 
+
+  --hero-height: 100vh; 
 }
 
 
@@ -55,13 +83,14 @@ h3 {
   font-size: 1.4rem;
 }
 h4 {
-  font-size: 1.4rem; 
+  font-size: 1.2rem; 
 }
 
 /* re-usable css rules for flex */
 .flex {
   display: flex; 
 }
+ 
 .fx-1 {
   flex: 1; 
 }
@@ -87,10 +116,34 @@ h4 {
 .fx-justify-start {
   justify-content: flex-start;
 }
+.fx-wrap {
+  flex-wrap: wrap;
+}
+/* more common styles */
+.m-top-10 {
+  margin-top: 1.5rem; 
+}
+.m-v-10 {
+  margin: 1.5rem 0; 
+}
+.border-1px-white  {
+  border: 1px solid var(--white-color); 
+}
+.p-8 {
+  padding: .8rem; 
+}
+.m-8 {
+  margin: .8rem; 
+}
+.b-radius-7 {
+  border-radius: .7rem; 
+}
 .w-100 {
   width: 100%; 
 }
-
+.m-auto {
+  margin: 0 auto; 
+}
 /* media query common css rules for mobile */
 @media screen and (max-width: 768px) {
   html {
@@ -99,8 +152,16 @@ h4 {
   .flex {
     flex-direction: column;
   }
+  
   .align-center {
     align-items: flex-start;
+  }
+  .fx-row {
+    flex-direction: row; 
+    align-items: center; 
+  }
+  :root {
+    --hero-height: 40vh; 
   }
   
 }

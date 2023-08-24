@@ -1,0 +1,49 @@
+/* location container */
+.container {
+    width: 100%; 
+    max-width: var(--container-width);
+    margin-top: 1.5rem; 
+}
+/* location container */
+.location {
+    padding-bottom: 1.5rem;  
+}
+.location h4 {
+    font-size: 1.1rem; 
+    font-weight: normal; 
+    margin-bottom: 1rem; 
+}
+/* pin location div */
+.pin {
+    width: 40%; 
+    margin-left: 1rem; 
+    margin-top: .8rem; 
+}
+.pin h4 {
+    margin-bottom: 1rem; 
+}
+/* pin place order button */
+.pin a {
+    margin: .5rem 0; 
+    width: 150px;
+    border: 1px solid var(--black-color); 
+    padding: .4rem; 
+    transition: var(--default-transition);
+  }
+  .pin a:hover {
+    border-color: transparent; 
+    background-color: var(--active-color);
+    color: white; 
+  } 
+
+  @media (max-width: 800px) {
+    .pin {
+        margin-left: 0;
+    }
+    .pin h4 {
+        width: 80vw; 
+    }
+    .pin a {
+        width: 120px; 
+    }
+  }

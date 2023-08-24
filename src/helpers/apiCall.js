@@ -1,5 +1,6 @@
 // import { createAlert } from '../components/nav/Alert';
 import Instance from './axiosInterceptor';
+import {toast } from 'react-toastify';
 
 export const postDoc = async (url, form, dispatch) => {
   try {
@@ -37,7 +38,6 @@ export const getDoc = async (url, log, dispatch) => {
    try {
       let res = await Instance.get(url); 
       let {data} = res; 
-
       return data; 
    } catch (err) {
       handleAuthErr(err, log, dispatch) 
@@ -50,6 +50,7 @@ export const getDoc = async (url, log, dispatch) => {
 const handleAuthErr = (err, log, dispatch) => {
    let {response} = err;
    let data = response?.data;
+   if (log) toast("Error fetching data from API!"); 
   //  if (response?.status === 500) {
   //   createAlert("error", "Server Error, try again!", dispatch); 
   //   return; 

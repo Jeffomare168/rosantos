@@ -1,0 +1,3 @@
+.socials a svg:hover {
+    color: var(--active-color); 
+}

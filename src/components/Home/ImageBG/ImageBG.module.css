@@ -1,0 +1,27 @@
+.container {
+    height: 500px; 
+    background-attachment: fixed;
+    background-size: cover; 
+    border-radius: 1.2rem; 
+    margin-top: 1.5rem; 
+}
+.container h3 {
+    color: var(--white-color); 
+    font-size: 1.6rem; 
+    text-transform: uppercase;
+}
+.container a {
+    color: var(--white-color); 
+    font-weight: bold;
+    padding: .3rem .8rem; 
+    transition: var(--transition); 
+}
+.container a:hover {
+    background-color: var(--active-color); 
+    border-color: transparent;
+}
+@media (max-width: 800px) {
+    .container {
+        height: 200px; 
+    }
+}

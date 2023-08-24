@@ -1,8 +1,12 @@
+// react query setup
 import {
   QueryClient,
   QueryClientProvider,
 } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools'
+import { ReactQueryDevtools } from 'react-query/devtools'; 
+// react toast setup
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Create a client
 const queryClient = new QueryClient()
@@ -37,6 +41,7 @@ export default function App({ Component, pageProps }) {
           }
       </StateProvider>
       <ReactQueryDevtools initialIsOpen={false} />
+      <ToastContainer />
     </QueryClientProvider>
   )
   

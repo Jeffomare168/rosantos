@@ -1,0 +1,26 @@
+.heading {
+    text-align: center;
+    margin: 1rem 0; 
+}
+.phone {
+    background: var(--active-color); 
+    font-weight: bold;
+    color: var(--white-color);
+    text-align: center; 
+    width: fit-content;
+    padding: .8rem; 
+    margin: .8rem auto; 
+    border-radius: .4rem;
+}
+.span {
+    text-align: center; 
+    display: block; 
+    margin: 0 auto 1rem; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    color: var(--danger-color); 
+}
+.textarea {
+    min-height: 20vh; 
+    border-radius: .4rem; 
+}
