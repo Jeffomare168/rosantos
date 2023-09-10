@@ -125,7 +125,7 @@ const OrderList = ({items, setItems, total, setTotal, setFood, setType}) => {
 
     const handleSubmit = async () => {
         if (
-            !validateEntries(name, "name") || !validateEntries(email, "email") || !validateEntries(phone, "phone")
+            !validateEntries(name, "name") || !validateEntries(phone, "phone")
         ) return; 
         let content = ``; 
 
@@ -180,7 +180,7 @@ const OrderList = ({items, setItems, total, setTotal, setFood, setType}) => {
                     setValue={setName}
                 />
                 <AppInput 
-                    label='Email'
+                    label='Email - (optional)'
                     value={email}
                     setValue={setEmail}
                 />

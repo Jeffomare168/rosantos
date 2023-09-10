@@ -4,6 +4,7 @@ import { AppInput, Button } from "@/components";
 import {Head, Email} from "@/utils"; 
 
 import styles from "@/styles/Contact.module.css"; 
+import { ImageBG } from "@/components/Home";
 
 // validating input entries
 export const validateEntries = (value, title) => {
@@ -23,7 +24,7 @@ export default function Contact() {
 
     const handleSubmit = async () => {
         if (!validateEntries(purpose, "Purpose") || !validateEntries(name, "Name")
-            || !validateEntries(email, "Email") || !validateEntries(phone, "Phone") 
+             || !validateEntries(phone, "Phone") 
             || !validateEntries(message, "Message")
         ) return;
         
@@ -45,7 +46,7 @@ export default function Contact() {
     }; 
 
     return (
-        <div>
+        <>
             <Head title={'Contact us'}/>
             <h2 className={styles.heading}>Contact us for inquiries</h2>
             <p className={styles.phone}>{process.env.NEXT_PUBLIC_PHONE || ""}</p>
@@ -76,7 +77,7 @@ export default function Contact() {
                         setValue={setName}
                     />
                     <AppInput 
-                        label="Email"
+                        label="Email - (Optional)"
                         placeholder={'name@gmail.com'}
                         value={email}
                         setValue={setEmail}
@@ -98,7 +99,12 @@ export default function Contact() {
                     onClick={handleSubmit}
                 />
             </form>
-        </div>
+            <ImageBG 
+                image={'https://res.cloudinary.com/dyo0ezwgs/image/upload/v1694257246/rosantos/bg02_izctl4.jpg'}
+                title={'Welcome'}
+            />
+            <br />
+        </>
     )
 }
 

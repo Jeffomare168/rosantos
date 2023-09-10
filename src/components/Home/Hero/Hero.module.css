@@ -5,7 +5,7 @@
     height: var(--hero-height); 
     width: 100vw; 
     z-index: -1; 
-    mix-blend-mode: overlay;
+    /* mix-blend-mode: overlay; */
 }
 .hero_container img {
     width: 100%; 

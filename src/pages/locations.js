@@ -16,7 +16,7 @@ export default function Locations() {
     return (
         <div>
             <Head title={'Locations'}/>
-            <Highlights />
+             
            
             <Location 
                 title={'KTDA Farmers Building Tom Mboya Street'}
@@ -27,18 +27,7 @@ export default function Locations() {
         </div>
     )
 }; 
-
-// highlights on number of customers served and locations
-
-const Highlights = ({}) => (
-    <div className={`flex align-center`}>
-        <h4>Locations: 2+ &nbsp;&nbsp;</h4> 
-        <h4>Customers Served: 10,000+</h4> 
-        <br />
-        <br />
-    </div>
-); 
-
+ 
 // map to location 
  
 const defaultProps = {
