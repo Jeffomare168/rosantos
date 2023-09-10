@@ -25,7 +25,7 @@ export default function Menu() {
         <div>
             <Head title={'Menu'}/>
             <ImageBG 
-                image={'https://res.cloudinary.com/dyo0ezwgs/image/upload/v1694256589/rosantos/bg01_b2ywnq.jpg'}
+                image={'https://res.cloudinary.com/dnuvnajtt/image/upload/v1694364558/rosantos/bg01_b2ywnq_wzsq3y.jpg'}
                 title={'Our Menu'}
                 component={
                     <Link 

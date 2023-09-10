@@ -33,10 +33,8 @@ function Footer(props) {
                 <p className={`flex align-center fx-row justify-center`}><FaRegCopyright size={22} color={'#000000'}/>&nbsp;&nbsp;The Rosantos Restaurant. {new Date().getFullYear()}</p>
                 <br />
                 <div className={`${styles.socials} flex fx-row align-center justify-center`}>
-                    <Link href="#"><BsFacebook size={22} color={'#000000'}/>&nbsp;&nbsp;</Link>
-                    <Link href="#"><BsTwitter size={23} color={'#000000'}/>&nbsp;&nbsp;</Link>
-                    <Link href="#"><BsInstagram size={22} color={'#000000'}/>&nbsp;&nbsp;</Link>
-                    <Link href="#"><BsTiktok size={22} color={'#000000'}/>&nbsp;&nbsp;</Link>
+                    <Link href={'https://www.facebook.com/p/The-Rosantos-Restaurant-100072956457236/'} rel="noreferrer" target="_blank"><BsFacebook size={22}/>&nbsp;&nbsp;</Link>
+                    <Link href={'https://www.instagram.com/the_rosantos_restaurant/'} rel="noreferrer" target="_blank"><BsInstagram size={22}/>&nbsp;&nbsp;</Link>
                 </div>
                 <br />
             </div>
