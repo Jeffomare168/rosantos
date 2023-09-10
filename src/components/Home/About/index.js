@@ -8,7 +8,7 @@ import AppImage from '@/components/common/Image';
 import { useMediaQuery } from '@/components/Nav';
 import styles from "./About.module.css"; 
 
-const img = 'https://res.cloudinary.com/dyo0ezwgs/image/upload/v1694256590/rosantos/bg03_nukgx1.jpg';
+const img = 'https://res.cloudinary.com/dnuvnajtt/image/upload/v1694364560/rosantos/bg03_nukgx1_oeuqvl.jpg';
 
 function About({page}) {
   const isBreakpoint = useMediaQuery(800)

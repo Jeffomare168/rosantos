@@ -11,7 +11,7 @@ export default function Home() {
       <About />
       <Locations />
       <ImageBG 
-        image={'https://res.cloudinary.com/dyo0ezwgs/image/upload/v1694257246/rosantos/bg02_izctl4.jpg'}
+        image={'https://res.cloudinary.com/dnuvnajtt/image/upload/v1694364559/rosantos/bg02_izctl4_d1e0yn.jpg'}
         title={'Our Delicacies'}
       />
       <Delicacies />

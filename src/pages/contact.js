@@ -48,7 +48,11 @@ export default function Contact() {
     return (
         <>
             <Head title={'Contact us'}/>
-            <h2 className={styles.heading}>Contact us for inquiries</h2>
+            <ImageBG 
+                image={'https://res.cloudinary.com/dyo0ezwgs/image/upload/v1694257246/rosantos/bg02_izctl4.jpg'}
+                title={'Contact us for inquiries'}
+            />
+            {/* <h2 className={styles.heading}>Contact us for inquiries</h2> */}
             <p className={styles.phone}>{process.env.NEXT_PUBLIC_PHONE || ""}</p>
             <span className={styles.span}>You can call or email us below</span>
             <form>
@@ -99,10 +103,7 @@ export default function Contact() {
                     onClick={handleSubmit}
                 />
             </form>
-            <ImageBG 
-                image={'https://res.cloudinary.com/dyo0ezwgs/image/upload/v1694257246/rosantos/bg02_izctl4.jpg'}
-                title={'Welcome'}
-            />
+            
             <br />
         </>
     )
