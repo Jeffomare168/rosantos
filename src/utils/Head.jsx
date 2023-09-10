@@ -5,7 +5,7 @@ const HeadComponent = ({title}) => {
   
     return (
       <Head>
-        <title>{'Site title :: ' + title}</title>
+        <title>{`${process.env.NEXT_PUBLIC_SITE_TITLE || ""} - ${title || ""}`}</title>
         <meta name="description" content={"Site description"} />
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
