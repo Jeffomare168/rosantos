@@ -1,54 +1,121 @@
+import React from "react"; 
+
 import { AppInput, Button } from "@/components";
-import {Head} from "@/utils"; 
+import {Head, Email} from "@/utils"; 
 
 import styles from "@/styles/Contact.module.css"; 
 
-export default function Contact() {
+// validating input entries
+export const validateEntries = (value, title) => {
+    if (!value) {
+        window.alert(`The field ${title} is required!`); 
+        return false; 
+    } 
+    return true; 
+}
 
+export default function Contact() {
+    const [purpose, setPurpose] = React.useState(""); 
+    const [name, setName] = React.useState(""); 
+    const [email, setEmail] = React.useState(""); 
+    const [phone, setPhone] = React.useState(""); 
+    const [message, setMessage] = React.useState(""); 
+
+    const handleSubmit = async () => {
+        if (!validateEntries(purpose, "Purpose") || !validateEntries(name, "Name")
+            || !validateEntries(email, "Email") || !validateEntries(phone, "Phone") 
+            || !validateEntries(message, "Message")
+        ) return;
+        
+        let object = {
+            purpose, 
+            name, 
+            email, 
+            phone, 
+            message
+        }
+        let res = await Email(object, 'template_ju9qrb8', `${purpose} sent!`);
+        if (res) {
+            setPurpose("")     ; 
+            setName(""); 
+            setEmail(""); 
+            setPhone(""); 
+            setMessage(""); 
+        }
+    }; 
 
     return (
         <div>
             <Head title={'Contact us'}/>
             <h2 className={styles.heading}>Contact us for inquiries</h2>
-            <p className={styles.phone}>0700-000-000</p>
+            <p className={styles.phone}>{process.env.NEXT_PUBLIC_PHONE || ""}</p>
             <span className={styles.span}>You can call or email us below</span>
             <form>
                 <div className={'flex fx-column m-v-10'}> 
-                    <RadioInput value={'Inquiries'} label={'Inquiries'}/>
-                    <RadioInput value={'Order'} label={'Order follow up'}/>
-                    <RadioInput value={'Reservation'} label={'Reservation'}/>
-                </div>
-                <div className={`flex align-center fx-spc-between`}>
-                    <AppInput 
-                        placeholder={'Name'}
-                        style={{marginRight: ".5rem"}}
+                    <RadioInput 
+                        value={'inquiry'} 
+                        label={'Inquiries'}
+                        setValue={setPurpose}
                     />
-                    <AppInput 
-                        placeholder={'Email'}
-                        style={{marginRight: ".5rem"}}
+                    <RadioInput 
+                        value={'order follow up'} 
+                        label={'Order follow up'}
+                        setValue={setPurpose}
                     />
-                    <AppInput 
-                        placeholder={'Phone'}
-                        style={{marginRight: ".5rem"}}
+                    <RadioInput 
+                        value={'reservation'} 
+                        label={'Reservation'}
+                        setValue={setPurpose}
                     />
                 </div>
-                <textarea 
-                    column={40}
-                    row={30}
-                    placeholder={"type your message here"}
-                    className={`${styles.textarea} w-100 p-8`}
+                <div className={`${styles.inputs} flex align-center fx-spc-between`}>
+                    <AppInput 
+                        label="Full name"
+                        placeholder={'Odero Joe'}
+                        value={name}
+                        setValue={setName}
+                    />
+                    <AppInput 
+                        label="Email"
+                        placeholder={'name@gmail.com'}
+                        value={email}
+                        setValue={setEmail}
+                    />
+                    <AppInput 
+                        label={'Phone number'}
+                        placeholder={'0700-123-456'}
+                        value={phone}
+                        setValue={setPhone}
+                    />
+                </div>
+                
+                <Textarea 
+                    value={message}
+                    setValue={setMessage}
                 />
                 <Button 
                     text={'Submit'}
+                    onClick={handleSubmit}
                 />
             </form>
         </div>
     )
 }
 
-const RadioInput = ({label, value}) => (
+const RadioInput = ({label, value, setValue}) => (
     <span className={`flex fx-row align-center`} style={{marginBottom: ".4rem"}}>
-        <input type={"radio"} name={'reason'} value={value}/>&nbsp;
+        <input type={"radio"} name={'reason'} value={value} onChange={e => setValue(e.target.value)}/>&nbsp;
         <label htmlFor={value}>{label}</label>
     </span>
+); 
+
+export const Textarea = ({value, setValue}) => (
+    <textarea 
+        column={40}
+        row={30}
+        placeholder={"type your message here"}
+        className={`${styles.textarea} w-100 p-8`}
+        value={value}
+        onChange={e => setValue(e.target.value)}
+    />
 )

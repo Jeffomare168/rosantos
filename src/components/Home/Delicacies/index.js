@@ -1,29 +1,28 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { useInView } from 'react-intersection-observer';
-import { motion, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 
-import useFetchData from '@/hooks/useFetchData';
 import { Loader } from '@/utils';
-import styles from "./Delicacies.module.css"; 
 import { customUseEffect } from '@/hooks/useEffect';
 import AppImage from '@/components/common/Image';
+import { data } from '@/assets';
+
+import styles from "./Delicacies.module.css"; 
 
 function Delicacies(props) {
     // food delicacies 
-    // included using fetching with react query but can also use the useEffect custom hook; 
     const router = useRouter()
     const [foods, setFoods] = React.useState([]);
     const [loading, setLoading] = React.useState(true); 
-    const {status, data, error, isFetching} = useFetchData('foods', "/foods", false); 
+    
 
     React.useEffect(() => customUseEffect(() => {
         if (router.isReady) {
-            setFoods(data); 
+            setFoods(data.highlights); 
             setLoading(false); 
         }
-    }, router), [status, router.isReady])
-    // console.log(status, data, error, isFetching); 
+    }, router), [router.isReady])
 
     return (
         <div className={`${styles.container} m-auto flex fx-column align-center justify-center`}>
@@ -76,7 +75,7 @@ const Food = ({item, index}) => {
             <div className={`${styles.food_description} fx-1 flex fx-column fx-spc-between`}>
                 <h4>{item.title}</h4>
                 <p>{item.description}</p>
-                <h4>{item.price}</h4>
+                <h4>KES: {item.price}</h4>
             </div>
         </motion.div>
     )

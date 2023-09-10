@@ -156,6 +156,9 @@ h4 {
   .align-center {
     align-items: flex-start;
   }
+  .align-center-md {
+    align-items: center;
+  }
   .fx-row {
     flex-direction: row; 
     align-items: center; 

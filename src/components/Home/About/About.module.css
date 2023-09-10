@@ -2,6 +2,7 @@
     max-width: var(--container-width); 
     text-align: center;
     margin-top: calc(var(--hero-height) - 7vh); 
+    gap: .4rem;
 }
 .a_tag {
     border-bottom: 1px solid var(--active-color); 

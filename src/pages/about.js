@@ -1,15 +1,16 @@
 
 import {Head} from "@/utils"; 
+import { About as Component } from "@/components/Home";
 
 export default function About() {
 
 
     return (
-        <div>
+        <>
             <Head title={'About us'}/>
-            <p>About page</p>
-            
-
-        </div>
+            <Component 
+                page={true}
+            />
+        </>
     )
 }

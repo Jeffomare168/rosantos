@@ -31,21 +31,36 @@
 }
 .location_image {
     flex: 1; 
-    min-width: 250px; 
+    min-width: 300px; 
     height: 250px; 
     margin-right: .2rem; 
     margin-bottom: .2rem; 
     overflow: hidden; 
+    position: relative; 
 }
 .location_image img {
     width: 100%; 
     height: 100%; 
     object-fit: cover;
 }
-
+.location_image p {
+    text-transform: capitalize;
+    background-color: rgba(0,0,0,.8);
+    padding: .8rem; 
+    color: var(--white-color);
+    z-index: 1000; 
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    margin: .3rem; 
+    border-radius: .4rem; 
+}
 @media (max-width: 800px) {
     .location_image {
         min-width: 150px; 
         height: 150px; 
+    }
+    .map {
+        height: 20vh; 
     }
 }

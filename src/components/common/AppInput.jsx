@@ -7,9 +7,9 @@ function AppInput({type, value, setValue, err, style, icon, label, validate, pla
     const inputRef = React.useRef(); 
 
     return (
-        <>
+        <div style={{flex: 1}}>
+            {label && <h4>{label}</h4>}
             <div className={`${styles.input}`} ref={inputRef} style={style && {...style}}>
-                {label && label}
                 <input 
                     type={type || "text"} 
                     value={value} 
@@ -20,7 +20,7 @@ function AppInput({type, value, setValue, err, style, icon, label, validate, pla
                 />
             </div>
             {error && <p className={styles.error}>{error}</p>}
-        </>
+        </div>
             
     );
 }

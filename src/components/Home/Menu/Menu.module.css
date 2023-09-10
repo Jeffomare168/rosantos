@@ -30,7 +30,7 @@
     font-weight: normal; 
     /* text-transform: uppercase; */
   }
-  .menu_item span {
+  .menu_item .boundary {
     display: block; 
     flex: 1; 
     border-bottom: 5px dotted var(--grey-color); 
@@ -40,6 +40,24 @@
     font-size: 1.2rem; 
     /* font-weight: bold; */
   }
+
+  /* icons */
+.icons {
+  min-width: 200px;   
+
+}
+.icons span {
+  font-weight: bold;
+}
+
+.icon {
+  cursor: pointer;
+  width: 25px;
+  height: 25px; 
+  border-radius: 50%;
+  border: 1px solid var(--black-color);
+  font-size: .8rem; 
+}
 
   @media (max-width: 800px) {
     .menu_container h2 {
@@ -56,5 +74,10 @@
     }
     .menu_container a {
       flex-direction: row; 
+    }
+    .icon {
+      width: 20px;
+      height: 20px; 
+      font-size: .8rem; 
     }
   }

@@ -1,0 +1,39 @@
+/* select */
+.order_select {
+    min-width: 300px; 
+}
+.order_select p {
+    font-weight: bold; 
+
+}
+.order_select select {
+    width: 100%; 
+    padding: .3rem 0; 
+    margin: .3rem 0; 
+    cursor: pointer;
+}
+
+.order_page ul li {
+    margin-top: 1rem; 
+    margin-left: 2rem; 
+}
+
+.instructions {
+    padding-bottom: 2rem; 
+    margin: 1rem 0; 
+}
+.instructions_image {
+    width: 50%; 
+    
+}
+.instructions_image img {
+    width: 100%; 
+    height: 100%; 
+}
+
+@media (max-width: 800px) {
+    .instructions_image {
+        width: 98%; 
+        padding: .8rem; 
+    }
+}

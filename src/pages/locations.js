@@ -1,28 +1,26 @@
-import {Head} from "@/utils"; 
+import React from 'react'
 import {FaMapPin} from "react-icons/fa"; 
 
-import NumberCounter from 'number-counter';
 import GoogleMapReact from 'google-map-react';
 
 import config from "@/config/env"
+import {Head} from "@/utils"; 
+
+import AppImage from "@/components/common/Image";
+import {data} from "@/assets"; 
 
 import styles from "@/styles/Locations.module.css"; 
-import { IMAGES } from "@/assets";
-import AppImage from "@/components/common/Image";
+import Link from "next/link";
 
 export default function Locations() {
-
-
     return (
         <div>
             <Head title={'Locations'}/>
             <Highlights />
+           
             <Location 
                 title={'KTDA Farmers Building Tom Mboya Street'}
-                coordinates={{
-                    lat: 59.955413,
-                    long: 30.337844
-                }}
+                coordinates={{...defaultProps.center}}
             />
             <h4 className={`m-v-10`}>Gallery</h4>
             <Images />
@@ -34,18 +32,21 @@ export default function Locations() {
 
 const Highlights = ({}) => (
     <div className={`flex align-center`}>
-        <NumberCounter end={2} delay={5} className={`${styles.counter}`} preFix="Locations:"/> <span className={styles.counter_separator}/>
-        <NumberCounter end={100000}  delay={1} className={`${styles.counter}`} preFix="Customers served:" postFix="+"/>
+        <h4>Locations: 2+ &nbsp;&nbsp;</h4> 
+        <h4>Customers Served: 10,000+</h4> 
+        <br />
+        <br />
     </div>
 ); 
 
 // map to location 
+ 
 const defaultProps = {
     center: {
-      lat: 10.99835602,
-      lng: 77.01502627
+        lat: -1.2866863059528941,
+        lng: 36.826935739049844
     },
-    zoom: 11
+    zoom: 15
 };
 
 const Location = ({title, coordinates}) => (
@@ -57,7 +58,7 @@ const Location = ({title, coordinates}) => (
         >
             <Marker 
                 lat={coordinates.lat}
-                lng={coordinates.long}
+                lng={coordinates.lng}
                 text="here"
             />
            
@@ -76,30 +77,32 @@ const Marker = ({ text }) => (
     </div>
 );
 
+const Images = ({}) => {
+    const [images] = React.useState(data?.gallery); 
+    const [initial, setInitial] = React.useState(12); 
 
-// a few images to showcase restaurant
-let images = [
-    IMAGES.LOCATION001.src,
-    IMAGES.LOCATION002.src,
-    IMAGES.LOCATION003.src,
-    IMAGES.LOCATION004.src,
-    IMAGES.LOCATION006.src,
-    IMAGES.LOCATION007.src,
-    IMAGES.LOCATION008.src,
-]
-const Images = ({}) => (
-    <div className={`flex fx-row fx-wrap m-v-10`}>
-        {
-            images.map((src, index) => (
-                <div className={styles.location_image}>
-                    <AppImage 
-                        src={src}
-                        alt={'Location image'}
-                        width={250}
-                        height={200}
-                    />
-                </div>
-            ))
-        }
-    </div>
-)
+    const handleMore = (e) => {
+        e.preventDefault(); 
+
+        setInitial(initial + 10); 
+    }
+    return (
+        <>
+            <div className={`flex fx-row fx-wrap m-v-10`}>
+                {
+                    images.slice(0, initial).map((item, index) => (
+                        <div className={styles.location_image} key={index}>
+                            <AppImage 
+                                src={item.src}
+                                alt={'Location image'}
+                                width={500}
+                                height={500}
+                            />
+                            <p>{item.title?.split("_").join(" ").toLowerCase()}</p>
+                        </div>
+                    ))
+                }
+            </div>
+            {(initial <= images.length) && <Link onClick={handleMore} href="#" className="text-center m-v-10 flex align-center align-center-md justify-center">More</Link>}
+        </>
+)}

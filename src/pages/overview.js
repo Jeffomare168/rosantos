@@ -1,34 +1,31 @@
 import React from 'react'; 
-import {Head, Loader} from "@/utils"; 
-import { IMAGES } from "@/assets";
-import { ImageBG } from "@/components/Home";
-import useFetchData from '@/hooks/useFetchData';
-import { customUseEffect } from '@/hooks/useEffect';
-import { useRouter } from 'next/router';
-
-import styles from "@/styles/Menu.module.css"; 
-import MenuItem from '@/components/common/MenuItem';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { AiOutlineArrowRight } from 'react-icons/ai';
+
+import {Head, Loader} from "@/utils"; 
+import { ImageBG } from "@/components/Home";
+import { customUseEffect } from '@/hooks/useEffect';
+import { data } from '@/assets';
+
+import MenuItem from '@/components/common/MenuItem';
+import styles from "@/styles/Menu.module.css"; 
 
 export default function Menu() {
     // menu page 
-    // named overview because of conflict with react query when getting items
     const router = useRouter(); 
     const [menu, setMenu] = React.useState({}); 
     const [loading, setLoading] = React.useState(true); 
-    const {status, data, error, isFetching} = useFetchData('list', "/list", false); 
 
     React.useEffect(() => customUseEffect(() => {
-        console.log(data);
-        setMenu(data); 
-    }, router, setLoading), [status, router.isReady]);
+        setMenu(data.menu); 
+    }, router, setLoading), [router.isReady]);
 
     return (
         <div>
             <Head title={'Menu'}/>
             <ImageBG 
-                image={IMAGES.BG01.src}
+                image={'https://res.cloudinary.com/dyo0ezwgs/image/upload/v1694256589/rosantos/bg01_b2ywnq.jpg'}
                 title={'Our Menu'}
                 component={
                     <Link 
@@ -70,7 +67,7 @@ const MenuItems = ({title, items}) => (
         <hr />
         <br />
         {
-            items.map((item, index) => <MenuItem item={item} index={index} key={index}/>)
+            items?.map((item, index) => <MenuItem title={Object.keys(item)[0]} value={item[Object.keys(item)[0]]} index={index} key={index}  />)
         }
     </div>
 )

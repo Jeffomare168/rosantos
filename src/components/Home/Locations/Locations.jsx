@@ -10,8 +10,12 @@ function Locations({}) {
     return (
         <div className={`${styles.container} flex align-center m-auto`}>
             <div className={`fx-1`}>
-                <Location />
-                <Location />
+                <Location 
+                    title="KTDA Farmers Building Tom Mboya Street."
+                />
+                <Location 
+                    title="Traveler's House Opposite City Hall."
+                />
             </div>
             <div className={`${styles.pin}`}>
                 <AppImage 
@@ -21,6 +25,7 @@ function Locations({}) {
                     height={50}
                 />
                 <h4 style={{fontWeight: "bold", fontSize: "1.2rem"}}>You can now order your favorite meals from our restaurants on phone or Whatsapp</h4>
+                <h4 style={{fontWeight: "bold", fontSize: "1.2rem"}}>+254700-175-175</h4>
                 <Link href={"/order"} className={`flex align-center fx-spc-between fx-row`}>Place Order &nbsp;&nbsp; <AiOutlineArrowRight size={20}/></Link>
             </div>
         </div>
@@ -29,13 +34,13 @@ function Locations({}) {
 
 export default Locations;
 
-const Location = ({}) => {
+const Location = ({title}) => {
     // enter the location of the restaurant
     return (
         <>
             <div className={styles.location}>
-                <h4 style={{margin: ".8rem 0"}}>KTDA Farmers Building Tom Mboya Street, Nairobi, Kenya, 00100</h4>
-                <p>+254 700 175175</p>
+                <h4 style={{margin: ".8rem 0"}}>{title}</h4>
+                <p>Nairobi, Kenya</p>
             </div>
             <hr />
         </>

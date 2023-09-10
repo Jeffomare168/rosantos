@@ -5,23 +5,30 @@ import Link from 'next/link';
 import {AiOutlineArrowRight} from "react-icons/ai"; 
 
 import { customUseEffect } from '@/hooks/useEffect';
-import useFetchData from '@/hooks/useFetchData';
-import styles from "./Menu.module.css"; 
+// import useFetchData from '@/hooks/useFetchData';
 import { Loader } from '@/utils';
 import MenuItem from '@/components/common/MenuItem';
+import {data} from "@/assets"; 
+
+import styles from "./Menu.module.css"; 
 
 function Menu({}) {
     
     const router = useRouter(); 
     const [menu, setMenu] = React.useState([]); 
     const [loading, setLoading] = React.useState(true); 
-    const {status, data, error, isFetching} = useFetchData('menu', "/menu", false); 
-    // console.log(menu)
 
     React.useEffect(() => customUseEffect(() => {
-        setMenu(data); 
+        let foods = [];
+        let list = [...data.menu["White Meat"], ...data.menu["Red Meat"]]; 
+        for (let i = 0; i < list.length; i++) {
+            if (typeof(list[i]) === "object") {
+                foods.push(list[i]); 
+            }
+        }
+        setMenu(foods); 
         setLoading(false); 
-    }, router), [status, router.isReady])
+    }, router), [router.isReady])
 
     return (
         <div className={styles.menu_container}>
@@ -29,7 +36,7 @@ function Menu({}) {
             <Loader loading={loading} reset={true}/>
             <br />
             {
-                menu?.map((item, index) => (<MenuItem item={item} index={index} key={index}/>))
+                menu?.map((item, index) => (<MenuItem title={Object.keys(item)[0]} value={item[Object.keys(item)[0]]} index={index} key={index}/>))
             }
             
             <Link href="/overview" className={'flex align-center justify-center m-10 w-100'}>View full menu&nbsp;&nbsp;<AiOutlineArrowRight size={20}/></Link>

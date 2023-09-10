@@ -1,10 +1,12 @@
-import foods from "./foods"; 
-import menu from "./menu";
-import list from "./largerMenu"; 
+import about from "./about";
+import gallery from "./foods.json"; 
+import highlights from "./highlights";
+import menu from "./menu.json"
 
 
 export default {
-    foods,
+    about,
+    gallery,
+    highlights,
     menu,
-    list
 }

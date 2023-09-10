@@ -1,0 +1,193 @@
+{
+    "Breakfast": [
+        {"Mandazi": 50},
+        {"Chapati": 50},
+        {"Samosa": 50},
+        {"Sausage": 70},
+        {"Boiled Eggs (2PC)": 100},
+        {"Toast": 50},
+        {"Fried Egg (2PC)": 100},
+        {"Rolex (Chapati & Egg 2pc)": 150},
+        {"Pancake (2pc)": 100},
+        {"Sweet Potatoes": 100},
+        {"Nduma/Yam": 100},
+        {"Boiled Maize": 100},
+        {"Plain Omelette (2pc)": 100},
+        {"Spanish Omelette (2pc)": 120},
+        {"Kebab": 150},
+        {"Beef Burger": 150},
+        {"Beef Burger (With Cheese)": 400},
+        {"Plain Omelette": 100},
+        {"Uji (Porridge)": 150}
+    ],
+    "Coffee Drinks": [
+        {"Cappuccino": 200},
+        {"Cafe Latte": 200},
+        {"Cafe Mocha": 230},
+        {"Vanilla Latte": 240},
+        {"Cinnamon Cappuccino": 200},
+        {"Americano": 150},
+        {"Espresso Machiato": 100},
+        {"Espresso": 100},
+        {"Affogato": 180},
+        {"Hot Chocolate": 150},
+        {"House Coffee (white)": 150},
+        {"Black Coffee": 150},
+        {"Lemon Coffee": 150},
+        {"Honey Lemon Black Coffee": 180}
+    ],
+    "Tea": [
+        {"Ginger Tea": 150},
+        {"Lemon Tea": 120},
+        {"African Tea": 100},
+        {"Masala Tea": 150},
+        {"English Tea": 100},
+        {"Black Tea": 50},
+        {"Green Tea": 150},
+        {"Mint Tea": 150},
+        {"Glass of Milk": 120},
+        {"Cinnamon Tea": 150},
+        {"Honey Lemon Green Tea": 180},
+        {"Honey Lemon Black Tea": 180}
+    ],
+    "Special Drinks": [
+        {"Dawa": 250},
+        {"Lemon Water": 70}
+    ],
+    "Fresh Juices": [
+        {"Mango": 150},
+        {"Orange": 150},
+        {"Passion": 150},
+        {"Pineapple": 150},
+        {"Cocktail": 150},
+        {"Lemon Juice": 200},
+        {"Pineapple Mint": 180},
+        {"Mango Passion": 150},
+        {"Pineapple Passion": 150}
+    ],
+    "Soft Drinks": [
+        {"Soda 300 ML": 100},
+        {"Soda 350 ML": 100},
+        {"Mineral Water 500 ML": 70}
+    ],
+    "Iced Drinks": [
+        {"Iced Coffee (White)": 200},
+        {"Iced Coffee (Black)": 250},
+        {"Iced Tea (White)": 200},
+        {"Iced Tea (Black)": 200},
+        {"Iced Latte": 200},
+        {"Iced Mint Tea": 200},
+        {"Iced Vanilla Latte": 200},
+        {"Iced Choc Mocha": 200},
+        {"Iced Lemon and Ginger": 200}
+    ],
+    "Milkshakes": [
+        {"Vanilla Shake": 300},
+        {"Chocolate Shake": 300},
+        {"Strawberry Shake": 300},
+        {"Salted Caramel": 300},
+        {"Mango Shake": 300},
+        {"Banana Shake": 300},
+        {"Assorted Ice cream": 250}
+    ],
+    "Lemonades": [
+        {"Classic Lemonade": 150},
+        {"Strawberry Lemonade": 200},
+        {"Mint Lemonade": 200},
+        {"Tree Tomato Lemonade": 200},
+        {"Water Lemonade": 200}
+    ],
+    "Smoothies": [
+        {"Banana Smoothy": 300},
+        {"Strawberry Smoothy": 300},
+        {"Mango Smoothy": 300},
+        {"Tropical Mix Smoothy": 300},
+        {"Green Smoothy": 300},
+        {"Fruit Salad": 200},
+        {"Fruit Salad (with ice cream)": 250},
+        {"Fruit Salad (with yoghurt)": 250}
+    ],
+    "Sandwiches": [
+        {"Vegetable Sandwich": 300},
+        {"Chicken & Cheese": 400},
+        {"Bacon Letuce Tomatoes (BLT)": 450},
+        {"Ham & Cheese": 450} 
+    ],
+    "Green Vegetables": [
+        {"Managu (OSUGA)": 100},
+        {"Sageti (AKEYO)": 100},
+        {"Kunde": 100},
+        {"Mrenda": 100},
+        {"Mito": 100},
+        {"Sukuma": 100},
+        {"Cabbage": 50}
+    ],
+    "Side Orders & Extras": [
+        {"Ugali": 50},
+        {"Chapati": 50},
+        {"Rice": 100},
+        {"Yellow Beans": 150},
+        {"Maziwa Mala": 100},
+        {"Guacamole (Avacado Salad)": 100},
+        {"Kachumbari": 100},
+        {"Vegetable Salad": 200},
+        {"Extra Tea Bag": 20},
+        {"Extra Honey": 50}
+    ],
+    "Cakes (Slices)": [
+        {"Carrot Cake": 200},
+        {"Black Forest": 180},
+        {"White Forest": 200},
+        {"Chocolate Cake": 160},
+        {"Vanilla Cake": 160},
+        {"Red Velvet": 160},
+        {"Banana Cake": 180},
+        {"Cup Cake": 160}
+    ],
+    "Pastries": [
+        {"Cinnamon Roll": 140},
+        {"Plain Croissant": 140},
+        {"Chocolate Croissant": 140},
+        {"Muffins": 140},
+        {"Tea Scone": 100},
+        {"Sausage Roll": 150},
+        {"Chicken Pie": 200},
+        {"Steak Pie": 180}
+    ],
+    "White Meat": [
+        {"Dry Fried Fish (Tilapia)": 680},
+        {"Wet Fried Fish": 680},
+        {"Boiled Fish": 680},
+        {"Coconut Fish": 680},
+        {"Chicken Wet Fry": 500},
+        {"Chicken Stew": 500},
+        {"Boiled Chicken": 500},
+        {"Gizzards": 500},
+        {"Grilled Chicken": 350},
+        {"Chicken Wings": 500},
+        {"Chicken Maryland": 600}
+    ],
+    "Red Meat": [
+        {"Athola (Roasted Beef Stew)": 500},
+        {"Boiled Beef": 480},
+        {"Wet Fried Beef": 480},
+        {"Dry Fried Beef": 480},
+        {"Wet Fried Liver": 400},
+        {"Dry Fried Liver": 400},
+        {"Mbuzi Stew": 550},
+        {"Fried Mbuzi": 550},
+        {"Matumbo Stew (Beef)": 350},
+        {"Matumbo Fry (Mbuzi)": 400},
+        {"Anti-Theft (Shredded Roast Beef) 1/2 KG": 600},
+        {"Anti-Theft (Shredded Roast Beef) 1 KG": 1200}
+    ],
+    "Other Meals": [
+        {"Chips": 180},
+        {"Chips Masala": 230},
+        {"Saute Potatoes": 230},
+        {"Potatoes Wedges": 180},
+        {"Pilau Plain": 250},
+        {"Pilau Special": 350},
+        {"Ugali  & Mboga": 250}
+    ]
+}

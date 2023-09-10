@@ -1,28 +1,25 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 
 import { Oval } from  'react-loader-spinner'
 
 import styles from "@/styles/components/AppButton.module.css"; 
 
 function AppButton({onClick, text, icon, type}) {
-    const router = useRouter(); 
+    
     const [loading, setLoading] = React.useState(false); 
 
     const handleClick = () => {
         if (loading) return; 
-        let {redirect} = router.query; 
+         
         setLoading(true); 
-        setTimeout( () => {
-            
+        if (onClick) onClick(); 
+        setTimeout(() => {
             setLoading(false); 
-            let fn = onClick(); 
-            if (text === 'Submit') router.push(redirect || "/gigs"); 
         }, 2500)
     }
 
     return (
-        <div className={styles.button} onClick={handleClick}>
+        <div className={`${styles.button} ${loading ? styles.loading: ""}`} onClick={handleClick}>
             {
                 !loading ? (
                     <>

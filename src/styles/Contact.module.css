@@ -8,9 +8,12 @@
     color: var(--white-color);
     text-align: center; 
     width: fit-content;
-    padding: .8rem; 
+    padding: .4rem .8rem; 
     margin: .8rem auto; 
     border-radius: .4rem;
+}
+.inputs {
+    gap: .4rem; 
 }
 .span {
     text-align: center; 
@@ -22,5 +25,5 @@
 }
 .textarea {
     min-height: 20vh; 
-    border-radius: .4rem; 
+    border-radius: .2rem; 
 }

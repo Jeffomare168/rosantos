@@ -22,6 +22,7 @@ function Nav(props) {
                         src={IMAGES.LOGO.src}
                         width={100}
                         height={100}
+                        alt="logo"
                     />
                 </div>
                 <span className={`${styles.menu_items} flex align-center`}>
@@ -79,6 +80,10 @@ const menu = [
     {
         title: "Locations",
         link: "/locations"
+    },
+    {
+        title: "About us",
+        link: "/about"
     },
     {
         title: "Contact",

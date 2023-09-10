@@ -13,7 +13,7 @@ function Footer(props) {
     // copyright 
     // socials 
     return (
-            <div className={'p-8'}>
+            <div>
                 <hr />
                 <br />
                 <div className={'flex align-center fx-row'}>
@@ -23,6 +23,8 @@ function Footer(props) {
                         width={50}
                         height={50}
                     />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <Link href="/about">About us&nbsp;&nbsp;</Link>
                     <Link href="/order">Order&nbsp;&nbsp;</Link>
                     <Link href="/contact">Contact us&nbsp;&nbsp;</Link>
                     <Link href="/overview">Menu</Link>

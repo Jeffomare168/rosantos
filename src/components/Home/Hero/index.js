@@ -1,14 +1,15 @@
 import React from 'react';
-import { motion, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 
 import {BiChevronDownCircle} from "react-icons/bi"; 
 
-import { IMAGES } from '@/assets';
 import AppImage from '../../common/Image';
 import styles from "./Hero.module.css";
 
-function Hero(props) {
+const hero = 'https://res.cloudinary.com/dyo0ezwgs/image/upload/v1694256591/rosantos/hero_e4218o.jpg'; 
+
+function Hero({}) {
     const { ref, inView } = useInView({
         threshold: 0,
       });
@@ -17,7 +18,7 @@ function Hero(props) {
         <div className={`${styles.hero_container}`}>
             {/* background image */}
             <AppImage 
-                src={IMAGES.hero.src}
+                src={hero}
                 alt="Hero image"
                 width={1300}
                 height={720}
