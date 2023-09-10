@@ -4,7 +4,6 @@ import { ServerError } from '@/pages/500';
 class ErrorBoundary extends React.Component {
    constructor(props) {
      super(props)
- 
      // Define a state variable to track whether is an error or not
      this.state = { hasError: false }
    }
@@ -14,8 +13,8 @@ class ErrorBoundary extends React.Component {
      return { hasError: true }
    }
    componentDidCatch(error, errorInfo) {
-     // You can use your own error logging service here
-   //   console.log({ error, errorInfo })
+    // You can use your own error logging service here
+    //   console.log({ error, errorInfo })
    }
    render() {
      // Check if the error is thrown
