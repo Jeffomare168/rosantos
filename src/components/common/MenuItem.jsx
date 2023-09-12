@@ -13,7 +13,7 @@ function MenuItem({title, value, index}) {
             >
             <h4>{title}</h4>
             <span className={styles.boundary}/>
-            <p style={{fontWeight: "bold"}}>KES: {value}</p>
+            <p>Available</p>
         </div>
     );
 }

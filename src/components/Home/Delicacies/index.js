@@ -75,7 +75,7 @@ const Food = ({item, index}) => {
             <div className={`${styles.food_description} fx-1 flex fx-column fx-spc-between`}>
                 <h4>{item.title}</h4>
                 <p>{item.description}</p>
-                <h4>KES: {item.price}</h4>
+                <h4></h4>
             </div>
         </motion.div>
     )
