@@ -64,23 +64,6 @@ const MenuList = ({menu}) => {
 
 const MenuItems = ({title, items}) => (
     <div className={`${styles.menu_container} `}>
-        
-        {
-            (title === "Breakfast" || title === "Other Meals") && (
-                <div className={styles.menu_image}>
-                    <div className={styles.menu_holding_container}/>
-                    <AppImage 
-                        src={title === "Breakfast" ?
-                            "https://img.freepik.com/free-photo/fried-eggs-with-mushrooms-served-with-greens-sandwiches-cup-coffee_141793-731.jpg?size=626&ext=jpg": 
-                            "https://img.freepik.com/free-photo/spaghetti-black-cup-with-tomatoes-lettuce_1150-23167.jpg?size=626&ext=jpg"
-                        }
-                        alt="menu-item"
-                        width={300}
-                        height={500}
-                    />
-                </div>
-            )
-        }
         <h3 className={`m-v-10`}>{title}</h3>
         <hr />
         <br />
