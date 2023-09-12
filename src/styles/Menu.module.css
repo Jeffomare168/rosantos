@@ -12,25 +12,4 @@
     text-align: center;
     text-transform: capitalize;
 }
-.menu_image {
-    position: absolute; 
-    z-index: -1; 
-    width: 100%; 
-    height: 100%; 
-    
-}
-.menu_holding_container {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(255,255,255, .7);
-}
- 
-.menu_image  img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
-    z-index: -1; 
-}
+
