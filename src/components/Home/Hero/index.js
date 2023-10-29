@@ -7,7 +7,7 @@ import {BiChevronDownCircle} from "react-icons/bi";
 import AppImage from '../../common/Image';
 import styles from "./Hero.module.css";
 
-const hero = 'https://res.cloudinary.com/dyo0ezwgs/image/upload/v1694256591/rosantos/hero_e4218o.jpg'; 
+const hero = https://res.cloudinary.com/dnuvnajtt/image/upload/v1694364564/rosantos/hero_e4218o_ueohtw.jpg; 
 
 function Hero({}) {
     const { ref, inView } = useInView({
