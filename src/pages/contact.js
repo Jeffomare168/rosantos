@@ -49,7 +49,7 @@ export default function Contact() {
         <>
             <Head title={'Contact us'}/>
             <ImageBG 
-                image={'https://res.cloudinary.com/dyo0ezwgs/image/upload/v1694257246/rosantos/bg02_izctl4.jpg'}
+                image={'https://res.cloudinary.com/dnuvnajtt/image/upload/v1694364564/rosantos/hero_e4218o_ueohtw.jpg'}
                 title={'Contact us for inquiries'}
             />
             {/* <h2 className={styles.heading}>Contact us for inquiries</h2> */}
